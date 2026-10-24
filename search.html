@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Items - LPU FindHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="logo-area">
+            <img src="LPU.png" alt="LPU Logo" class="logo">
+            <h1>LPU FindHub</h1>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="search.html">Search Items</a></li>
+                <li><a href="lost-item.html">Report Lost</a></li>
+                <li><a href="found-item.html">Report Found</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="search-section">
+            <h2>Search Lost & Found Items</h2>
+            <form action="search_process.php" method="GET" class="search-form">
+                <div class="form-group">
+                    <label for="keyword">Keyword:</label>
+                    <input type="text" id="keyword" name="keyword" placeholder="What are you looking for? (e.g., keys, ID card)">
+                </div>
+
+                <div class="form-group">
+                    <label for="item-type">Item Type:</label>
+                    <select id="item-type" name="item_type">
+                        <option value="">All Types</option>
+                        <option value="lost">Lost Item</option>
+                        <option value="found">Found Item</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Campus Location:</label>
+                    <input type="text" id="location" name="location" placeholder="Where was it lost/found?">
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date">
+                </div>
+
+                <button type="submit" class="submit-btn">Search</button>
+            </form>
+        </section>
+
+        <section id="resolved-items">
+            <h2>Recently Resolved Items</h2>
+            <p>These items have been successfully returned to their owners.</p>
+            <div class="resolved-grid">
+                <article class="resolved-card">
+                    <img src="Keys.jpg" alt="Returned Keys">
+                    <h3>Office Key</h3>
+                    <p><strong>Status:</strong> Returned to Owner</p>
+                    <p><strong>Found at:</strong> Block 13</p>
+                </article>
+                <article class="resolved-card">
+                    <img src="Id Card.jpeg" alt="Returned ID Card">
+                    <h3>Student ID Card</h3>
+                    <p><strong>Status:</strong> Yet to Return</p>
+                    <p><strong>Found at:</strong> Central Library</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Lovely Professional University. All rights reserved.</p>
+            <nav class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="search.html">Search</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="contact.html">Support</a>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>

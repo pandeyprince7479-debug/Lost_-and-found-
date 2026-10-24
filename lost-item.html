@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report a Lost Item - LPU FindHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="logo-area">
+            <img src="LPU.png" alt="LPU Logo" class="logo">
+            <h1>LPU FindHub</h1>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="search.html">Search Items</a></li>
+                <li><a href="lost-item.html">Report Lost</a></li>
+                <li><a href="found-item.html">Report Found</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="report-section">
+            <h2>Report a Lost Item</h2>
+            <p>Please provide as many details as possible to help us locate your lost item.</p>
+            
+            <form action="submit_lost_item.php" method="POST" enctype="multipart/form-data" class="report-form">
+                <div class="form-group">
+                    <label for="item-name">Item Name:</label>
+                    <input type="text" id="item-name" name="item_name" required placeholder="e.g., iPhone 15, Student ID Card">
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category:</label>
+                    <select id="category" name="category" required>
+                        <option value="">Select a category</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Documents">Documents/IDs</option>
+                        <option value="Accessories">Accessories</option>
+                        <option value="Clothing">Clothing/Bags</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Probable Location at LPU:</label>
+                    <input type="text" id="location" name="location" required placeholder="e.g., Block 34, Central Library, UniMall">
+                </div>
+
+                <div class="form-group">
+                    <label for="date-lost">Date Lost:</label>
+                    <input type="date" id="date-lost" name="date_lost" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="time-lost">Approximate Time:</label>
+                    <input type="time" id="time-lost" name="time_lost" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="photo">Reference Photo (if available):</label>
+                    <input type="file" id="photo" name="photo" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Detailed Description:</label>
+                    <textarea id="description" name="description" rows="5" required placeholder="Mention specific details like color, stickers, scratches, or brand/model numbers that will help verify ownership."></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Submit Lost Report</button>
+                    <button type="reset" class="cancel-btn">Cancel</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Lovely Professional University. All rights reserved.</p>
+            <nav class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="search.html">Search</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="contact.html">Support</a>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>
